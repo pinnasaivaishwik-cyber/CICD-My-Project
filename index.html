@@ -1,77 +1,143 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Simple Webpage</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project Demo</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
+            background: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0077cc;
+            color: white;
             padding: 20px;
+            text-align: center;
         }
 
-        h1 {
-            color: #2c3e50;
+        nav {
+            margin-top: 10px;
         }
 
-        h2 {
-            color: #3498db;
-        }
-
-        p {
-            color: #555;
-            font-size: 18px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            background-color: #3498db;
+        nav a {
             color: white;
-            margin: 5px auto;
-            padding: 10px;
-            width: 200px;
-            border-radius: 5px;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 15px;
             text-decoration: none;
-            background-color: #2ecc71;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            margin: 0 15px;
+            font-weight: bold;
         }
 
-        a:hover {
-            background-color: #27ae60;
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
         }
     </style>
 </head>
-
 <body>
 
-    <h1>Welcome to My Website</h1>
+    <header>
+        <h1>My Capstone Project</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <p>This is a simple webpage created using HTML and CSS.</p>
+    <div class="hero" id="home">
+        <h2>Welcome to My Website</h2>
+        <p>This sample project demonstrates a simple web application that can be deployed using Jenkins and Docker.</p>
 
-    <h2>About Me</h2>
-    <p>Hello! I am learning web development.</p>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message"></p>
+    </div>
 
-    <h2>My Hobbies</h2>
-    <ul>
-        <li>Reading</li>
-        <li>Coding</li>
-        <li>Playing Games</li>
-    </ul>
+    <section id="about">
+        <h2>About the Project</h2>
+        <p>
+            This is a lightweight single-page website created as a capstone project example.
+            It combines HTML, CSS, and JavaScript into one file, making it easy to deploy
+            and demonstrate Continuous Integration and Continuous Deployment (CI/CD).
+        </p>
+    </section>
 
-    <a href="https://www.google.com">Visit Google</a>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: student@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Capstone Project Demo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "🎉 Success! Your website is running correctly.";
+        }
+    </script>
 
 </body>
 </html>
+```
